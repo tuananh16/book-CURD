@@ -1,0 +1,112 @@
+// src/components/Book.scss
+.container-main {
+    padding: 0 64px;
+}
+
+.book {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 0 0 16px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+
+    img {
+        max-width: 200px;
+        /* Điều chỉnh kích thước tối đa của ảnh */
+        width: 100%;
+        /* Đảm bảo ảnh không vượt quá container */
+        height: auto;
+        margin-bottom: 16px;
+        display: block;
+        /* Đảm bảo ảnh không có khoảng cách thừa bên dưới */
+        margin-left: auto;
+        /* Canh giữa ảnh trong container */
+        margin-right: auto;
+        /* Canh giữa ảnh trong container */
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin: 0 0 8px;
+        color: #333;
+    }
+
+    span {
+        display: block;
+        font-size: 1em;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    p {
+        font-size: 1em;
+        color: #333;
+        line-height: 1.4;
+        display: -webkit-box;
+        /* Sử dụng flexbox */
+        -webkit-box-orient: vertical;
+        /* Định hướng flexbox theo chiều dọc */
+        overflow: hidden;
+        /* Ẩn phần dư thừa của văn bản */
+        text-overflow: ellipsis;
+        /* Thêm dấu ... khi văn bản quá dài */
+        -webkit-line-clamp: 3;
+        /* Số dòng tối đa trước khi cắt */
+        line-clamp: 3;
+        /* Số dòng tối đa trước khi cắt (tiêu chuẩn, chưa được hỗ trợ rộng rãi) */
+        max-height: calc(1.4em * 3);
+        /* Tính toán chiều cao tối đa dựa trên số dòng và line-height */
+        max-width: 400px;
+    }
+}
+
+.list-book {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    .book {
+        //   flex: 1 1 calc(33.333% - 16px);
+        box-sizing: border-box;
+    }
+}
+
+h1 {
+    padding: 16px 0;
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+}
+
+.admin {
+    display: flex;
+    justify-content: center;
+
+    button {
+        margin-right: 10px;
+        padding: 0;
+        color: #03045e; // Text color
+        // background-color: #007bff; // Background color
+        border: 1px solid #03045e; // Border color
+        border-radius: 5px; // Rounded corners
+
+        &:hover {
+            background-color: darken(#e0aaff, 10%);
+            border-color: darken(#03045e, 10%);
+        }
+    }
+}
+
+.admin_add {
+    min-width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: dotted;
+
+    button {
+        font-size: 2.5rem;
+    }
+}

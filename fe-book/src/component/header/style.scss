@@ -1,0 +1,52 @@
+// src/components/style.scss
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #3ca47a;
+    border-bottom: 1px solid #dee2e6;
+
+    &__logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        a {
+            text-decoration: none;
+            color: #dee2e6;
+
+            &:hover {
+                color: #333;
+            }
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+
+        .fa-user-circle {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: #dee2e6;
+        }
+
+        p {
+            margin: 0;
+            margin-right: 2rem;
+            margin-left: 2px;
+            font-size: 1rem;
+            color: #dee2e6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
